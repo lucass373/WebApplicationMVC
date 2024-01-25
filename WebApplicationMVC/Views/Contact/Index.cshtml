@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["title"] = "Contact List";
+}
+
+
+<div class="text-center">
+    
+<div class="d-grid gap-2 d-md-flex justify-content-md-start">
+    <a class="btn btn-primary role="button" asp-controller="Contact" asp-action="Create">Add Contact</a>
+</div>
+
+<h1 class="display-4">Contact List</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>teste1</td>
+            <td>teste@teste.teste</td>
+            <td>2121212121</td>
+            <td>
+                <div class="btn-group" role="group">
+                    <a role="button" class="btn btn-primary">Update</a>
+                    <a role="button" class="btn btn-danger">Delete</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>teste2</td>
+            <td>teste2@teste.com</td>
+            <td>222222222</td>
+            <td>
+                <div class="btn-group" role="group">
+                    <a role="button" class="btn btn-primary">Update</a>
+                    <a role="button" class="btn btn-danger">Delete</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>teste3</td>
+            <td>teste3@teste.com</td>
+            <td>2323232323</td>
+            <td>
+                <div class="btn-group" role="group">
+                    <a role="button" class="btn btn-primary">Update</a>
+                    <a role="button" class="btn btn-danger">Delete</a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
