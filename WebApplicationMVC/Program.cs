@@ -1,7 +1,19 @@
+using Microsoft.EntityFrameworkCore;
+using WebApplicationMVC.Data;
+using WebApplicationMVC.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+var configuration = new ConfigurationBuilder()
+              .SetBasePath(Directory.GetCurrentDirectory())
+              .AddJsonFile("appsettings.json")
+              .Build();
+
 builder.Services.AddControllersWithViews();
+builder.Services.AddEntityFrameworkSqlServer().AddDbContext<DatabaseContext>(o => o.UseSqlServer(configuration.GetConnectionString("DataBase")));
+builder.Services.AddScoped<IContactRepository, ContactsRepository>();
 
 var app = builder.Build();
 

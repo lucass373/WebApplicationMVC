@@ -1,5 +1,35 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["title"] = "Editar Contato";
 }
+
+
+<div class="text-center">
+    
+<h1 class="display-4">Editar Contato</h1>
+
+</div>
+
+<form>
+  <div class="form-group">
+    <label for="Name">Name</label>
+    <input type="text" class="form-control" placeholder="Enter Name">
+  </div>
+
+  <div class="form-group">
+    <label for="E-mail">E-mail</label>
+    <input type="text" class="form-control" placeholder="Enter E-mail">
+  </div>
+
+  <div class="form-group">
+    <label for="Phone">Phone</label>
+    <input type="text" class="form-control" placeholder="Enter Phone">
+  </div>
+
+ <div class="d-grid gap-2">
+  <button type="submit" class="btn btn-primary btn-block">Update</button>
+  <a type="button" class="btn btn-secondary btn-block" asp-controller="Contact" asp-action="Index">voltar</a>
+ </div>
+</form>
+
+
+
