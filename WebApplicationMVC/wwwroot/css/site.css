@@ -16,3 +16,14 @@ html {
 body {
   margin-bottom: 60px;
 }
+.field-validation-error{
+    color: red;
+}
+
+.close-alert {
+    position: absolute;
+    right: -10px;
+    top: -15px;
+    border-radius: 15px;
+    height: 31px;
+}
