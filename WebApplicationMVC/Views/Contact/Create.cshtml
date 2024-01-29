@@ -11,24 +11,29 @@
 </div>
 
 <form asp-controller="Contact" asp-action="Create" method="post">
-  <div class="form-group">
-    <label for="Name">Name</label>
+
+    <div class="mb-3">
+    <label class="form-label" for="Name">Name</label>
     <input asp-for="Name" type="text" class="form-control" placeholder="Enter Name">
+    @Html.ValidationMessageFor(x=> x.Name)
   </div>
 
-  <div class="form-group">
-    <label for="E-mail">E-mail</label>
+    <div class="mb-3">
+    <label class="form-label" for="E-mail">E-mail</label>
     <input asp-for="Email" type="text" class="form-control" placeholder="Enter E-mail">
+    @Html.ValidationMessageFor(x=> x.Email)
   </div>
 
-  <div class="form-group">
-    <label for="Phone">Phone</label>
+    <div class="mb-3">
+    <label class="form-label" for="Phone">Phone</label>
     <input asp-for="Phone" type="text" class="form-control" placeholder="Enter Phone">
+    @Html.ValidationMessageFor(x=> x.Phone)
   </div>
 
  <div class="d-grid gap-2">
   <button type="submit" class="btn btn-primary btn-block">Create</button>
   <a type="button" class="btn btn-secondary btn-block" asp-controller="Contact" asp-action="Index">voltar</a>
+  
  </div>
 </form>
 
